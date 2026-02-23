@@ -1,6 +1,6 @@
 print("==== Welcome To Refiuse ====")
 
-menu = ["Mulai Game", "Daftar Ending Yang ditemukan"]
+menu = ["Mulai Game", "Daftar Ending Yang Ditemukan"]
 
 def mulai_game(nama):
     if nama == "":
@@ -8,17 +8,17 @@ def mulai_game(nama):
 
     print(f"""
 Suatu hari {nama} sedang bersekolah,
-akan tetapi ada berita yang muncul di sosial media
+akan tetapi ada berita yang muncul di sosial media dan televisi
 tentang seseorang mencoba menyerang orang lain
-dengan keadaan digigit.""")
+dengan keadaan leher yang terluka.""")
     input("")
 
-    print(f"""{nama} terkejut dan langsung pergi dari kelas
-Semuanya panik dan terjadi kekacauan di sekolah tersebut.
+    print(f"""{nama} terkejut dan langsung keluar dari kelas.
+{nama} melihat banyak orang yang panik dan terjadi kekacauan di sekolah tersebut.
 """)
 
-    print(f"""{nama} pun bertemu dengan seseorang yang bejalan dengan sempoyongan, 
-{nama} mencoba membantu dia tetapi {nama} melihat tangan dia tergigit.""")
+    print(f"""{nama} pun bertemu dengan seseorang yang berjalan dengan sempoyongan.
+{nama} mencoba membantu dia tetapi {nama} melihat tangan dan leher dia ada bekas luka gigitan.""")
     input("")
 
     while True:
@@ -26,60 +26,65 @@ Semuanya panik dan terjadi kekacauan di sekolah tersebut.
         print("1. Meninggalkannya lalu pergi dari sana")
         print("2. Menolongnya walaupun ia tergigit")
 
-        pilih_awal = input("tentukan sekarang: ")
+        pilih_awal = input("Tentukan sekarang: ")
 
         if pilih_awal == "1":
-            print(f"{nama} Pergi dari sana lalu ia menuju keatap sekolah dengan tergesa gesa,ia merasa kesal dengan dirinya, tetapi ia juga tidak bisa membantu orang tadi")
-            print(f"dan setibanya {nama} diatap ia melihat keadaan kota dengan penuh asap dimana mana, terjadi keributan dan kebakaran")
-
+            print(f"{nama} pergi dari sana lalu ia menuju ke atap sekolah dengan tergesa-gesa.")
+            print(f"Setibanya {nama} di atap, ia melihat keadaan kota dengan penuh asap di mana-mana.")
             input("")
-            print(f"Lily: Kakak {nama}! kamu baik baik saja!? aku tidak tahu apa yang terjadi mereka menjadi gila!")
-            print(f"{nama} terkejut ada yang memanggilnya dari gedung sebelah ia langsung menengok kesana dan ia melihat adiknya sedang berada diruang lab.")
-            print(f"{nama}: Kakak tidak apa apa lily! kamu tetap disana nanti aku selamatkan!")
-            print(f"Lily: kakak.. aku takut...")
-            print(f"{nama}: tenang ajaa.. ada aku disini")
-            print(f"secara tiba tiba ada zombie datang dan menemukan mereka berdua")
-            while True:
-                print(f"apa yang {nama} akan lakukan jika zombie mulai menyerang")
-                print(f"1. melawannya dengan tangan kosong")
-                print(f"2. melarikan diri dengan Lily")
 
-                pilih_lanjutan = input("pilih sesuai logika: ")
-            
+            print(f"Lily: Kakak {nama}! Kamu baik-baik saja!?")
+            print(f"{nama}: Kakak tidak apa-apa, Lily! Tetap di sana!")
+            print("Secara tiba-tiba ada zombie datang.")
+
+            while True:
+                print(f"Apa yang akan {nama} lakukan?")
+                print("1. Melawannya dengan tangan kosong")
+                print("2. Melarikan diri dengan Lily")
+
+                pilih_lanjutan = input("Pilih sesuai logikamu: ")
+
                 if pilih_lanjutan == "1":
-                    print(f"{nama} mencoba melawan melawan zombie dengan tangan kosong")
-                    print(f"perkelahian antara zombie dan {nama} terjadi")
-                    print(f"{nama} ternyata gabisa berkelahi dan meninggal karena zombie")
-                    simpan_ending("bad end 2 (die)")
-                    return
+                    print(f"{nama} mencoba melawan zombie dengan tangan kosong.")
+                    print(f"{nama} kalah dan meninggal.")
+                    simpan_ending("Bad End 2 (Die)")
+                    return nama   # ✅ FIX BUG
 
                 elif pilih_lanjutan == "2":
-                     print(f"{nama} memilih melarikan diri dengan Lily")  
-  
+                    print(f"{nama} memilih melarikan diri dengan Lily.")
+                    
+                    while True:
+                        print("Tim penyelamat muncul. Apa yang kamu lakukan?")
+                        print("1. Membuat obor api")
+                        print("2. Berteriak")
+
+                        pilih_ketiga = input("Tentukan: ")
+
+                        if pilih_ketiga == "1":
+                            print("Tim penyelamat melihat kalian dan menyelamatkan kalian.")
+                            simpan_ending("Good End (Safe In Chaos)")
+                            return nama   # ✅ FIX BUG
+
+                        elif pilih_ketiga == "2":
+                            print("Zombie menemukan kalian.")
+                            simpan_ending("Bad End (Exposed)")
+                            return nama   # ✅ FIX BUG
+
+                        else:
+                            print("Pilihan tidak ada.")
+
+                else:
+                    print("Pilihan tidak ada.")
 
         elif pilih_awal == "2":
-            print(f"{nama} menghampirinya dan langsung menggendongnya lalu pergi menuju atap sekolah, akan tetapi {nama} ketakutan dengan keadaan orang tersebut.")
-            print(f"setibanya diatap sekolah {nama} menoleh kesana kesini, dan ia menemukan adiknya yang sedang berada dilab ipa bersama anak anak yang lainnya")
-            
-            input("")
-            print(f"{nama}: Lily! kamu baik baik saja!? kakak akan kesana membantumu! jadi tolong untuk menjaga dirimu Lily!")
-            print(f"Lily: Kakak! dibelakangmu! Kakak!")
-            input("")
-            print(f"{nama} menoleh kebelakangnya dan tiba tiba orang yang tergigit berubah menjadi Zombie, lalu ia menerkam ke {nama} sampai terluka tetapi {nama} mencoba melawan sehingga mendorongnya dan orang tersebut terjatuh dari atap")
-            print(f"{nama}: Si-sial... aku malah lengah, Ma-maafkan aku Lily...")
-            input("")
-            print(f"Lily: Ka-kakak... Tidak!")
-            print(f"{nama} akhirnya berubah menjadi zombie dan terjatuh dari atap, Lily hanya bisa melihatnya dengan tatapan kesedihan ketika kakaknya jatuh dari atap sekaligus berubah jadi zombie")
-            
-            simpan_ending ("Bad End (Die)")
-            break
+            print(f"{nama} menolong orang tersebut.")
+            print("Orang itu berubah menjadi zombie.")
+            print(f"{nama} terluka dan akhirnya berubah.")
+            simpan_ending("Bad End (Die)")
+            return nama   # ✅ FIX BUG
 
         else:
-            print("Cepat Tentukan!")
-
-    input("")
-    return nama
-
+            print("Cepat tentukan!")
 
 def simpan_ending(teks):
     try:
@@ -91,9 +96,9 @@ def simpan_ending(teks):
 
     with open("ending.txt", "a") as file:
         file.write(teks + "\n")
-        
+
 def daftar_ending():
-    print("=== DAFTAR ENDING YANG DITEMUKAN ===")
+    print("=== DAFTAR ENDING ===")
 
     try:
         with open("ending.txt", "r") as file:
@@ -119,7 +124,12 @@ while True:
 
     if pilih == "1":
         nama_pemain = mulai_game(nama_pemain)
+
     elif pilih == "2":
         daftar_ending()
+
     elif pilih == "0":
         break
+
+    else:
+        print("Pilihan tidak ada di menu.")
